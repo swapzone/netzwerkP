@@ -1,3 +1,55 @@
-:-webkit-full-screen
+*{
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
 
-code "test"
+.header {
+    background-color: brown;
+    padding: 1rem 2rem 3rem 0; 
+    text-align: right;
+}
+.marketing {
+    background-color: yellow;
+    padding: 1rem 1rem 1rem 1rem;
+}
+.content {
+    
+}
+    .img {
+        background-color: beige;
+    padding: 1rem 1rem 1rem 1rem;
+}
+    .form {
+        background-color: rgb(131, 131, 95);
+        padding: 1rem 1rem 1rem 1rem;
+
+}
+.footer {
+    background-color: aqua;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+       background-color: rgb(189, 131, 141);
+    }
+
+    .img {
+        display: inline-block; 
+        width: 50%;
+    }
+    
+    .form {
+        display: inline-block;
+        width: 50%;
+    }
+}
