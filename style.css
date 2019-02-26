@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+
+body{
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.header{
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    background-color: blue;
+    text-align: right;
+    color: white;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.marketing{
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: chartreuse;
+}
+
+.img{
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: darkgray;
+}
+
+.form{
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: darkorange;
+}
+.footer{
+    padding: 2rem;
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) { 
+    .img{
+        display: inline-block;
+        width: 40%;
+    }
+    
+    .form{
+        display: inline-block;
+        width: 60%;
+    }
+}
