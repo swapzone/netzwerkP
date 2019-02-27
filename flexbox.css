@@ -1,0 +1,34 @@
+/*Eltern-Container*/
+.container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+/*Kind-Element*/
+.box {
+    background-color: red;
+    /*flex-grow; flex-shrink; flex-basis*/
+    flex: 1 0 21%;
+    margin: 1rem 1rem 0 1rem;
+}
+/*Pseudo-Selector: */
+.box:first-of-type {
+    flex-grow: 1;
+    background-color: yellow;
+}
+/*Von allen Elementen will ich das 2. Element haben*/
+.box:nth-of-type(2) {
+    background-color: pink;
+}
+.box:last-of-type {
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .box {
+        margin: 1rem;
+    }
+}
