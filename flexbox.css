@@ -17,6 +17,7 @@ body{
     margin-top: 1rem;
     
 }
+
 /*.box:first-of-type
 {
     flex-grow: 1;
@@ -26,6 +27,7 @@ body{
 {
     background-color: blueviolet;
 }*/
+
 @media (min-width: 768px){
     .container{
         flex-direction: row;
