@@ -1,78 +1,79 @@
-*{
-    margin: 0%;
-    padding: 0%
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-    background-color: aqua;
-    text-align: right;
-    padding: 2rem 2rem 3rem 0rem;
-    letter-spacing: 1px;
+  background-color: aqua;
+  text-align: right;
+  padding: 2rem 2rem 3rem 0rem;
+  letter-spacing: 1px;
 }
 
-.logo {
-    background-color: thistle;
-}
-
-.intro {
-    background-color: aquamarine;
-    padding: 1rem;
-    margin-top: 1rem; 
-    margin-bottom: 1rem;
-}
-
-.content {
-}
-
-.image {
-    background-color: rosybrown;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.form {
-    background-color: cadetblue;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer {
-    background-color: beige;
-    padding: 1rem;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-}
-
-@media only screen and (min-width: 481px) {
-    .content {
-        display: flex;
-    }
-    .image {
-        flex: 1 0 auto;
-    }
-    .form {
-        flex: 2 0 auto;
-    }
+.header__logo {
+  letter-spacing: 1.2px;
+  color: white;
 }
 
 @media only screen and (min-width: 1025px) {
-
-    .wrapper {
-        display: flex;
-    }
-    .intro {
-        flex: 1 0 auto;
-    }
-    .content {
-        flex: 1 0 auto;
-        margin-top: 1rem;
-    }
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content__intro {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .content__subscription {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
 }
+
+.content__intro {
+  background-color: chocolate;
+  padding: 1rem;
+}
+
+.content-subscription__image {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.content-subscription__form {
+  background-color: royalblue;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 481px) {
+  .content-subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content-subscription__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .content-subscription__form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+
+.footer {
+  background-color: salmon;
+  text-align: center;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
