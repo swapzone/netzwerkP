@@ -1,6 +1,6 @@
 * {
-  margin: 0%;
-  padding: 0%
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,50 +15,51 @@ body {
   letter-spacing: 1px;
 
   &__logo {
-      letter-spacing: 1.2px;
-      color:white;
-    }
+    letter-spacing: 1.2px;
+    color:white;
+  }
 }
 
 .content {
-
-  @media only screen and (min-width: 1025px){
-    display: flex;
-    &__intro {
-      flex: 1 0 auto;
-    }
-    &__subscription {
-      flex: 1 0 auto;
-    }
-  }
-
   &__intro {
-      background-color: chocolate;
+    background-color: chocolate;
+    padding: 1rem;
+  }
+  
+  &-subscription {
+    &__image {
+      background-color: aquamarine;
       padding: 1rem;
     }
-    
 
-  &-subscription {
+    &__form {
+      background-color: royalblue;
+      padding: 1rem;
+    }
+
+    @media only screen and (min-width: 481px) {
+      display: flex;
+
       &__image {
-          background-color: aquamarine;
-          padding: 1rem;
+        flex: 1 0 auto;
       }
 
       &__form {
-        background-color: royalblue;
-        padding: 1rem;
+        flex: 1 0 auto;
       }
+    }
+  }
 
-      @media only screen and (min-width: 481px) {
-        display: flex;
-        &__image {
-          flex: 1 0 auto;
-        }
-
-        &__form {
-          flex: 1 0 auto;
-        }
-      }
+  @media only screen and (min-width: 1025px){
+    display: flex;
+  
+    &__intro {
+      flex: 1 0 auto;
+    }
+  
+    &__subscription {
+      flex: 1 0 auto;
+    }
   }
 }
 
