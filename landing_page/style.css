@@ -73,6 +73,7 @@ body {
 
 .content-intro__title {
   font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 400;
   color: #676d71;
   padding-top: 1rem;
@@ -88,6 +89,7 @@ body {
 
 .content-intro__subhead {
   color: #676d71;
+  line-height: 1.5;
   padding-top: 2rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -100,6 +102,7 @@ body {
 }
 
 .content-intro__headlist {
+  line-height: 1.5;
   color: #676d71;
   padding-top: 2rem;
   padding-left: 1rem;
@@ -113,6 +116,7 @@ body {
 
 .content-intro__list {
   color: #676d71;
+  line-height: 1.5;
   padding-left: 2rem;
 }
 
