@@ -1,46 +1,28 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-  background-color: aqua;
+  background-image: url(images/nP_Pocket_HG.png);
+  background-size: cover;
   text-align: right;
   padding: 2rem 2rem 3rem 0rem;
   letter-spacing: 1px;
 }
 
 .header__logo {
-  letter-spacing: 1.2px;
+  letter-spacing: 0.15rem;
   color: white;
-}
-
-@media only screen and (min-width: 1025px) {
-  .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .content__intro {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-  }
-  .content__subscription {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-  }
+  font-size: 1.8rem;
 }
 
 .content__intro {
-  background-color: chocolate;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .content-subscription__image {
@@ -71,9 +53,95 @@ body {
   }
 }
 
+@media only screen and (min-width: 1025px) {
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content__intro {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  .content__subscription {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+
+.content-intro__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #676d71;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .content-intro__title {
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+.content-intro__subhead {
+  color: #676d71;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .content-intro__subhead {
+    padding-left: 4rem;
+  }
+}
+
+.content-intro__headlist {
+  color: #676d71;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .content-intro__headlist {
+    padding-left: 4rem;
+  }
+}
+
+.content-intro__list {
+  color: #676d71;
+  padding-left: 2rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .content-intro__list {
+    padding-left: 5rem;
+  }
+}
+
+.content-intro__copy {
+  color: #676d71;
+  font-weight: 500;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  .content-intro__copy {
+    padding-left: 4rem;
+  }
+}
+
 .footer {
   background-color: salmon;
   text-align: center;
   padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

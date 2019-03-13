@@ -4,26 +4,26 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-  background-color: aqua;
+  background-image: url(images/nP_Pocket_HG.png);
+  background-size: cover;
   text-align: right;
   padding: 2rem 2rem 3rem 0rem;
   letter-spacing: 1px;
 
   &__logo {
-    letter-spacing: 1.2px;
+    letter-spacing: 0.15rem;
     color:white;
+    font-size: 1.8rem;    
   }
 }
 
 .content {
   &__intro {
-    background-color: chocolate;
-    padding: 1rem;
+    padding: 2rem;
   }
   
   &-subscription {
@@ -63,9 +63,69 @@ body {
   }
 }
 
+.content-intro {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(103, 109, 113);
+    padding-top: 1rem;
+    padding-left: 1rem;
+
+    @media only screen and (min-width: 1025px){
+      padding-top: 4rem;
+      padding-left: 4rem;
+    }
+  }
+
+  &__subhead {
+    color: rgb(103, 109, 113);
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+
+    @media only screen and (min-width: 1025px){
+      padding-left: 4rem;
+    }
+  }
+
+  &__headlist {
+    color: rgb(103, 109, 113);
+    padding-top: 2rem;
+    padding-left: 1rem; 
+
+    @media only screen and (min-width: 1025px){
+      padding-left: 4rem;
+    }
+  }
+
+  &__list {
+    color: rgb(103, 109, 113);
+    padding-left: 2rem; 
+
+    @media only screen and (min-width: 1025px){
+      padding-left: 5rem;
+    }
+  }
+
+  &__copy {
+    color: rgb(103, 109, 113);
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-left: 1rem; 
+
+    @media only screen and (min-width: 1025px){
+      padding-left: 4rem;
+    }
+  }
+}  
+
 .footer {
   background-color: salmon;
   text-align: center;
   padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
