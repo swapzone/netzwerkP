@@ -1,6 +1,9 @@
+$_font-color: rgb(103, 109, 113);
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,13 +25,14 @@ body {
 }
 
 .content {
-  &__intro {
+  margin-bottom: 3rem;
+  
+    &__intro {
     padding: 2rem;
   }
   
   &-subscription {
     &__image {
-      background-color: aquamarine;
       padding: 1rem;
     }
 
@@ -54,70 +58,55 @@ body {
     display: flex;
   
     &__intro {
-      flex: 1 0 auto;
+      flex: 1 0 50%;
+      padding-top: 4rem;
+      padding-left: 4rem;
     }
   
     &__subscription {
-      flex: 1 0 auto;
+      flex: 1 0 50%;
     }
   }
 }
 
 .content-intro {
+  color: $_font-color;
+  line-height: 1.5;
+
   &__title {
     font-size: 1.5rem;
+    line-height: 1.2;
     font-weight: 400;
-    color: rgb(103, 109, 113);
-    padding-top: 1rem;
-    padding-left: 1rem;
-
-    @media only screen and (min-width: 1025px){
-      padding-top: 4rem;
-      padding-left: 4rem;
-    }
   }
 
   &__subhead {
-    color: rgb(103, 109, 113);
     padding-top: 2rem;
-    padding-left: 1rem;
     padding-bottom: 1rem;
-
-    @media only screen and (min-width: 1025px){
-      padding-left: 4rem;
-    }
   }
 
   &__headlist {
-    color: rgb(103, 109, 113);
     padding-top: 2rem;
-    padding-left: 1rem; 
-
-    @media only screen and (min-width: 1025px){
-      padding-left: 4rem;
-    }
   }
 
   &__list {
-    color: rgb(103, 109, 113);
-    padding-left: 2rem; 
-
-    @media only screen and (min-width: 1025px){
-      padding-left: 5rem;
-    }
+    padding-left: 1.5rem;
   }
-
   &__copy {
-    color: rgb(103, 109, 113);
     font-weight: 500;
     padding-top: 2rem;
-    padding-left: 1rem; 
-
-    @media only screen and (min-width: 1025px){
-      padding-left: 4rem;
-    }
   }
 }  
+
+.content-subscription-image {
+  &__element {
+    width: 10rem;
+    height: 13rem;
+    background-color: white;
+    -webkit-box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.64);
+    box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.64);
+  }
+}
 
 .footer {
   background-color: salmon;
