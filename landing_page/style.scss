@@ -37,7 +37,7 @@ body {
     }
 
     &__form {
-      background-color: royalblue;
+      //background-color: royalblue;
       padding: 1rem;
     }
 
@@ -108,6 +108,45 @@ body {
   }
 }
 
+.subscription-form {
+  &__form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+.radio-button {
+  padding-top: 0.5rem;
+
+  &__input {
+    margin-right: 0.4rem;
+  }
+}
+
+.form-group__label {
+  &--hidden {
+    display: none;
+  }
+}
+
+input {
+  font-size: 16px;
+  padding: 0.5rem;;
+ }
+
+ input[type=submit] {
+  font-size: 16px;
+  padding: 0.5rem;
+  color: white;
+  background-color: #1878b8
+ ;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
+ }input[type=submit]:hover {
+  color: #1878b8
+ ;
+  background-color: white;
+ }
+ 
 .footer {
   background-color: salmon;
   text-align: center;
