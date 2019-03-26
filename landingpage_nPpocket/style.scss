@@ -37,48 +37,48 @@ body {
     }
 
     &__form {
-      background-color: royalblue;
+      //background-color: royalblue;
       padding: 1rem;
     }
 
-    @media only screen and (min-width: 481px) {
-      display: flex;
+.content-subscription-image {
+  &__element{
+      width: 10rem;
+      height: 13rem;
+      background-color: rgb(207, 207, 207);
 
-      &__image {
-        flex: 1 0 auto;
-      }
+      -webkit-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
+      -moz-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
+      box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
+  }
+}
+    
+@media only screen and (min-width: 481px) {
+  display: flex;
 
-      &__form {
-        flex: 2 0 auto;
-      }
-    }
+  &__image {
+    flex: 1 0 auto;
   }
 
-  .content-subscription-image {
-    &__element{
-        width: 10rem;
-        height: 13rem;
-        background-color: rgb(207, 207, 207);
+  &__form {
+    flex: 2 0 auto;
+  }
+}
+}
 
-        -webkit-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
-        -moz-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
-        box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.54);
-    }
+@media only screen and (min-width: 1025px) {
+  display: flex;
+
+  &__intro {
+    flex: 1 0 50%;
+    padding-top: 4rem;
+    padding-left: 4rem;
   }
 
-  @media only screen and (min-width: 1025px){
-    display: flex;
-  
-    &__intro {
-      flex: 1 0 50%;
-      padding-top: 4rem;
-      padding-left: 4rem;
-    }
-  
-    &__subscription {
-      flex: 1 0 50%;
-    } 
-  }
+  &__subscription {
+    flex: 1 0 50%;
+  } 
+}
 }
 
 .content-intro {
@@ -107,7 +107,49 @@ body {
   &__list {
       padding-left: 1.5rem;
   }
-}  
+} 
+
+.subscription-form {
+  color: $_font-color;
+
+  &__form-group {
+    margin-bottom: 1rem; 
+  } 
+}
+
+.radio-button {
+  padding-top: 0.5rem; 
+
+  &__input{
+    margin-right: 0.4rem;
+  }
+}
+
+.form-group__label {
+  font-weight: 600;
+  &--hidden {
+  display: none;
+  }
+}
+
+input {
+  font-size: 16px;
+  padding: 0.5rem;;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  padding: 0.5rem;
+  color: white;
+  background-color: #1878b8;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+  color: #1878b8;
+  background-color: white;
+}
 
 .footer {
   background-color: salmon;

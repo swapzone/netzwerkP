@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: darkgrey;
+}
+
+.header{
+    background-color: blue;
+    text-align: right;
+    padding: 2rem 2rem 3rem 0;
+}
+
+.logo{
+    color: white;
+    letter-spacing: 1px;
+}
+
+.intro{
+    background-color: green;
+    padding: 1rem;
+}
+
+.img{
+    background-color: grey;
+    padding: 1rem;
+}
+
+.form{
+    background-color: red;
+    padding: 1rem;
+}
+
+.footer{
+    background-color: darkgrey;
+    color: black;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media only screen and (min-width: 481px){
+    .container{
+        display: flex;
+    }
+   
+    .img{
+        flex: 1 0 auto;
+    }
+
+    .form{
+        flex: 2 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .header{
+        padding: 4rem 4rem 5rem 0;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .intro{
+        flex: 1 0 auto;
+    }
+
+    .container{
+        flex: 1 0 auto;
+        display: flex;
+    }
+}

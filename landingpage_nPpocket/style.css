@@ -36,8 +36,15 @@ body {
 }
 
 .content-subscription__form {
-  background-color: royalblue;
   padding: 1rem;
+}
+
+.content-subscription .content-subscription-image__element {
+  width: 10rem;
+  height: 13rem;
+  background-color: #cfcfcf;
+  -webkit-box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.54);
+  box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.54);
 }
 
 @media only screen and (min-width: 481px) {
@@ -56,14 +63,6 @@ body {
         -ms-flex: 2 0 auto;
             flex: 2 0 auto;
   }
-}
-
-.content .content-subscription-image__element {
-  width: 10rem;
-  height: 13rem;
-  background-color: #cfcfcf;
-  -webkit-box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.54);
-  box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.54);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -113,6 +112,50 @@ body {
 
 .content-intro__list {
   padding-left: 1.5rem;
+}
+
+.subscription-form {
+  color: #676d71;
+}
+
+.subscription-form__form-group {
+  margin-bottom: 1rem;
+}
+
+.radio-button {
+  padding-top: 0.5rem;
+}
+
+.radio-button__input {
+  margin-right: 0.4rem;
+}
+
+.form-group__label {
+  font-weight: 600;
+}
+
+.form-group__label--hidden {
+  display: none;
+}
+
+input {
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  padding: 0.5rem;
+  color: white;
+  background-color: #1878b8;
+  border-radius: 50px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+  color: #1878b8;
+  background-color: white;
 }
 
 .footer {
