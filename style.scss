@@ -77,24 +77,13 @@ body {
 }
 
 .content-subscription {
-  padding-top: 4rem;
-  padding-left: 4rem;
-
   @media only screen and (min-width: $breakpoint-small) {
     display: flex;
-  }
-
-  &__image {
-    padding: 1rem;
-  }
-
-  &__form {
-    padding: 1rem;
   }
 }
 
 .content-subscription-image {
-  padding: 1rem;
+  padding: 1rem 3rem;
 
   &__element {
     width: 10rem;
@@ -107,6 +96,9 @@ body {
 }
 
 .subscription-form {
+  padding: 1rem;
+  color: $font-color;
+
   &__form-group {
     margin-bottom: 1rem;
   }

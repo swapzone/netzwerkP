@@ -1,9 +1,28 @@
 // form element styling
+@import './variables';
+
+.form-group {
+  &__label {
+    &--hidden {
+      display: none;
+    }
+  }
+}
 
 .radio-button {
   padding-top: .5rem;
 
   &__input {
     margin-right: .4rem;
+  }
+}
+
+.input {
+  padding: .6rem;
+  border: 1px solid $border-color;
+  width: 100%;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    max-width: 20rem;
   }
 }
