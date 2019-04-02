@@ -3,6 +3,9 @@
 
 .form-group {
   &__label {
+    color: rgb(43, 43, 43);
+    font-weight: 600;
+    
     &--hidden {
       display: none;
     }
@@ -19,10 +22,43 @@
 
 .input {
   padding: .6rem;
-  border: 1px solid $border-color;
+  border: 1px solid $c-border;
   width: 100%;
+  transition: border-color .3s ease-in-out;
 
-  @media only screen and (min-width: $breakpoint-small) {
-    max-width: 20rem;
+  &:focus {
+    outline: none;
+    border-bottom-color: $c-primary; 
+  } 
+}
+
+.checkbox {
+  display: flex;
+  line-height: 1.35;
+
+  &__input {
+    margin-right: .6rem;
   }
 }
+
+.button {
+  background-color: $c-primary;
+  height: 3em;
+  padding: .5rem 2rem;
+  border-radius: 1.2rem;
+  border: 1px solid transparent;
+  transition: all .3s ease-in-out;
+  color: $c-white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+ 
+  &:hover {
+    background-color: transparent;
+    color: $c-primary;
+    border-color: $c-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+

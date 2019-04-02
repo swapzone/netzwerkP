@@ -1,5 +1,6 @@
 @import './scss/forms';
 @import './scss/variables';
+@import './scss/elements';
 
 * {
   margin: 0;
@@ -11,6 +12,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .header {
   background-image: url('images/nP_Pocket_HG.png');
   background-size: cover;
@@ -20,40 +27,70 @@ body {
 
   &__logo {
     letter-spacing: .15rem;
-    color:white;
+    color: $c-white;
     font-size: 1.8rem;    
   }
 }
 
 .content {
-  margin-bottom: 3rem;
+  flex-grow: 1;
 
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (min-width: $breakpoint-laptop) {
     display: flex;
+    padding: 2rem;
   }
 
-  &__intro {
-    padding: 2rem;
+  &__overview {
+    padding: 2rem 1rem;
 
-    @media only screen and (min-width: $breakpoint-large) {
-      flex: 1 0 50%;
+    @media only screen and (min-width: $breakpoint-laptop) {
+      padding: 2rem;
+      flex: 1 0 60%;
     }
   }
   
   &__subscription {
-    @media only screen and (min-width: $breakpoint-large) {
-      flex: 1 0 50%;
+    margin-bottom: 2rem;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin: 0 2rem 2rem 2rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-laptop) {
+      flex: 1 0 40%;
     }
   }
 }
 
-.content-intro {
-  color: $font-color;
+.content-overview {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+  }
+
+  &__intro {
+    @media only screen and (min-width: $breakpoint-tablet) {
+      flex: 1 0 70%;
+      padding: 1rem;
+    }
+  }
+
+  &__image {
+    margin: 2rem auto 0 auto;
+    
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin: 0 1rem 0 auto;
+      flex: 1 0 30%;
+    }
+  }
+}
+
+.content-overview-intro {
+  color: $c-font;
   line-height: 1.5;
 
   &__title {
     font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: 400;
   }
 
@@ -76,31 +113,46 @@ body {
   }
 }
 
-.content-subscription {
-  @media only screen and (min-width: $breakpoint-small) {
-    display: flex;
-  }
-}
-
-.content-subscription-image {
-  padding: 1rem 3rem;
-
+.content-overview-image {  
   &__element {
-    width: 10rem;
-    height: 13rem;
-    background-color: rgb(238, 238, 238);
-    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .41);
-    -moz-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .41);
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .41);
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+    height: auto;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 15rem;
+    }
   }
 }
 
 .subscription-form {
-  padding: 1rem;
-  color: $font-color;
+  width: 100%;
+  max-width: 25rem;
+  color: $c-font;
 
   &__form-group {
     margin-bottom: 1rem;
+  }
+
+  &__error {
+    display: none;
+    color: rgb(192, 12, 12);
+    margin: 1rem 0;
+    line-height: 1.3;
+  }
+
+  &__submit {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    width: 70%;
+    max-width: 300px;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin: 1.5rem 0 0 0;
+    }
   }
 }
 
@@ -108,8 +160,5 @@ body {
   background-color: salmon;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
+

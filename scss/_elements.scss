@@ -1,0 +1,16 @@
+@import './variables';
+
+.np-link {
+  color: $c-link;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited {
+    color: $c-link;
+  }
+
+  &:hover, &:active {
+    color: lighten($c-link, 20%);
+    border-bottom: 1px solid lighten($c-link, 20%);
+  }
+}

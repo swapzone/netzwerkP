@@ -1,7 +1,10 @@
-$font-color: rgb(103, 109, 113);
-$border-color: rgb(199, 199, 199);
+$c-font: rgb(103, 109, 113);
+$c-border: rgb(199, 199, 199);
+$c-link: rgb(24, 82, 121);
+$c-primary: #1877b8;
+$c-white: #fff;
 
 // media query breakpoints
-$breakpoint-small: 481px;
-$breakpoint-medium: 769px;
-$breakpoint-large: 1025px;
+$breakpoint-tablet: 481px;
+$breakpoint-laptop: 769px;
+$breakpoint-desktop: 1025px;

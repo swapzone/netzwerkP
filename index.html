@@ -1,66 +1,81 @@
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>nP Pocket</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="./js/script.js" type="text/javascript"></script>
 </head>
-<body>
+<body class="wrapper">
   <div class="header">
     <span class="header__logo">[nP]pocket</span>
   </div>
   <div class="content">
-    <div class="content__intro content-intro">
-      <h1 class="content-intro__title">[nP]pocket – Der neue Convenience-Marketing-Channel</h1>
-      <p class="content-intro__text">Dieses Whitepaper gibt Ihnen auf 12 Seiten geballtes Know-How rund um das Thema Wallet-Marketing ...</p>
-      <span class="content-intro__headlist">Inhalt:</span>
-      <ul class="content-intro__list content-intro-list">
-        <li class="content-intro-list__item">Wie erreichen Sie Ihre Zielgruppe richtig</li>
-        <li class="content-intro-list__item">Der Convenience-Marketing-Channel als Lösung</li>
-        <li class="content-intro-list__item">Funktionsweise der Wallet Passes</li>
-        <li class="content-intro-list__item">Wie Sie von Wallet Passes profitieren</li>
-        <li class="content-intro-list__item">Einbindung in die Customer Journey Ihrer Kunden</li>
-        <li class="content-intro-list__item">...</li>
-      </ul>
-      <p class="content-intro__copy">Mehr Infos? Holen Sie sich unser ausführliches Whitepaper!</p>
-    </div>
-
-    <div class="content__subscription content-subscription">
-      <div class="content-subscription__image content-subscription-image">
-        <div class="content-subscription-image__element"></div>
+    <div class="content__overview content-overview">
+      <div class="content-overview__intro content-overview-intro">
+        <h1 class="content-overview-intro__title">[nP]pocket – Der neue Convenience-Marketing-Channel</h1>
+        <p class="content-overview-intro__text">Dieses Whitepaper gibt Ihnen auf 12 Seiten geballtes Know-How rund um das Thema Wallet-Marketing.</p>
+        <span class="content-overview-intro__headlist">Inhalt:</span>
+        <ul class="content-overview-intro__list content-overview-intro-list">
+          <li class="content-overview-intro-list__item">Wie erreichen Sie Ihre Zielgruppe richtig</li>
+          <li class="content-overview-intro-list__item">Der Convenience-Marketing-Channel als Lösung</li>
+          <li class="content-overview-intro-list__item">Funktionsweise der Wallet Passes</li>
+          <li class="content-overview-intro-list__item">Wie Sie von Wallet Passes profitieren</li>
+          <li class="content-overview-intro-list__item">Einbindung in die Customer Journey Ihrer Kunden</li>
+        </ul>
+        <p class="content-overview-intro__copy">Mehr Infos? Holen Sie sich unser ausführliches Whitepaper!</p>
       </div>
-      <form class="content-subscription__form subscription-form">
-        <div class="subscription-form__form-group form-group">
-          <label class="form-group__label">Anrede</label>
-          <div class="radio-button"><input type="radio" class="radio-button__input" value="Frau" name="salutation">Frau</div>
-          <div class="radio-button"><input type="radio" class="radio-button__input" value="Mann" name="salutation">Mann</div>
-          <div class="radio-button"><input type="radio" class="radio-button__input" value="Divers" name="salutation">Divers</div>
-        </div>
+      <div class="content-overview__image content-overview-image">
+        <img
+          class="content-overview-image__element"
+          src="images/NWP_19_0659_Whitepaper_Titel.jpg"
+          alt="Whitepaper Cover">
+      </div>
+    </div>
+    <form class="content__subscription subscription-form" name="subscription-form" onsubmit="return validateForm()">
+      <div class="subscription-form__form-group form-group">
+        <label class="form-group__label">Anrede *</label>
+        <div class="radio-button"><input type="radio" class="radio-button__input" value="Frau" name="salutation">Frau</div>
+        <div class="radio-button"><input type="radio" class="radio-button__input" value="Herr" name="salutation">Herr</div>
+        <div class="radio-button"><input type="radio" class="radio-button__input" value="Divers" name="salutation">Divers</div>
+      </div>
 
-        <div class="subscription-form__form-group form-group">
-          <label for="firstname" class="form-group__label form-group__label--hidden">Vorname</label>
-          <input class="input" type="text" placeholder="Vorname" name="firstname" id="firstname" required>
-        </div>
+      <div class="subscription-form__form-group form-group">
+        <label for="firstname" class="form-group__label form-group__label--hidden">Vorname</label>
+        <input class="input" type="text" placeholder="Vorname *" name="firstname" id="firstname">
+      </div>
 
-        <div class="subscription-form__form-group form-group">
-          <label for="lastname" class="form-group__label form-group__label--hidden">Nachname</label>
-          <input class="input" type="text" placeholder="Nachname" name="lastname" id="lastname" required>    
-        </div>
+      <div class="subscription-form__form-group form-group">
+        <label for="lastname" class="form-group__label form-group__label--hidden">Nachname</label>
+        <input class="input" type="text" placeholder="Nachname *" name="lastname" id="lastname">    
+      </div>
 
-        <div class="subscription-form__form-group form-group">
-          <label for="email" class="form-group__label form-group__label--hidden">E-Mail-Adresse</label>
-          <input class="input" type="email" placeholder="E-Mail-Adresse" name="email" id="email" required>
-        </div>
+      <div class="subscription-form__form-group form-group">
+        <label for="email" class="form-group__label form-group__label--hidden">E-Mail-Adresse</label>
+        <input class="input" type="email" placeholder="E-Mail-Adresse *" name="email" id="email">
+      </div>
 
-        <label>
-          <input type="checkbox" name="checkbox" value="agreement">
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox" name="checkbox" value="agreement">
+        <span>
           Ich bestätige, dass meine angegebenen Daten für den Versand des Whitepapers und zur 
           Kontaktsaufnahm durch die netzwerk P GmbH verarbeitet und genutzt werden können. 
-          Weitere Informationen zum Datenschutz und Widerruf finden Sie hier.
-        </label>
-        <input type="submit" value="Absenden">
-      </form>
-    </div>
+          Weitere Informationen zum Datenschutz und Widerruf finden Sie
+          <a
+            class="np-link"
+            href="https://www.netzwerk-p.com/datenschutz"
+            target="_blank">hier</a>.
+        </span>
+      </label>
+
+      <span class="subscription-form__error" id="form-error">
+        Es müssen alle Felder Felder vollständig ausgefüllt werden.
+      </span>
+
+      <input
+        class="button subscription-form__submit"
+        type="submit"
+        value="Absenden">
+    </form>
   </div>
   <div class="footer">FOOTER</div>
 </body>
