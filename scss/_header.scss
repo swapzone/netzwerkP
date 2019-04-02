@@ -1,0 +1,15 @@
+// header styles
+
+.header {
+  background-image: url('images/nP_Pocket_HG.png');
+  background-size: cover;
+  text-align: right;
+  padding: 2rem 2rem 3rem 0;
+  letter-spacing: 1px;
+
+  &__logo {
+    letter-spacing: .15rem;
+    color: $c-white;
+    font-size: 1.8rem;    
+  }
+}
