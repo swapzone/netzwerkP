@@ -9,76 +9,77 @@
 
 
 .content {
+  color: $c-font;
   flex-grow: 1;
   width: 100%;
-  max-width: 1680px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 1.5rem 1rem;
 
-  @media only screen and (min-width: $breakpoint-laptop) {
+  @media only screen and (min-width: $breakpoint-tablet) {
     display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
   }
 
-  &__overview {
-    padding: 2rem 1rem;
-
-    @media only screen and (min-width: $breakpoint-laptop) {
-      padding: 2rem;
-      flex: 1 0 60%;
-    }
-  }
-  
-  &__subscription {
+  &__title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 400;
     margin-bottom: 2rem;
 
     @media only screen and (min-width: $breakpoint-tablet) {
-      // margin: 1.5rem 2rem 1rem 2rem;
-      margin-top: 1.5rem;
+      flex: 1 0 100%;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__intro {
+    @media only screen and (min-width: $breakpoint-tablet) {
+      flex: 1 0 70%;
+      padding-right: 1rem;
     }
 
     @media only screen and (min-width: $breakpoint-laptop) {
       flex: 1 0 40%;
     }
   }
-}
-
-.content-overview {
-  @media only screen and (min-width: $breakpoint-tablet) {
-    display: flex;
-  }
-
-  &__intro {
-    @media only screen and (min-width: $breakpoint-tablet) {
-      flex: 1 0 70%;
-      margin: 1rem;
-    }
-  }
 
   &__image {
-    margin: 2rem auto 0 auto;
-    
+    width: 60%;
+    margin-top: 2rem;
+
     @media only screen and (min-width: $breakpoint-tablet) {
-      margin: 0 1rem 0 auto;
       flex: 1 0 30%;
+      margin-top: 0;
+      width: unset;
+    }
+
+    @media only screen and (min-width: $breakpoint-laptop) {
+      flex: 1 0 20%;
+    }
+  }
+  
+  &__subscription {
+    margin: 2rem 0;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      flex: 1 1 100%;
+    }
+
+    @media only screen and (min-width: $breakpoint-laptop) {
+      flex: 1 0 40%;
+      margin: 0;
     }
   }
 }
 
-.content-overview-intro {
-  color: $c-font;
+.content-intro {
   line-height: 1.5;
 
-  &__title {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    font-weight: 400;
-
-    @media only screen and (min-width: $breakpoint-tablet) {
-      font-size: 1.6rem;
-    }
-  }
-
   &__text {
-    padding-top: 2rem;
+
     padding-bottom: 1rem;
   }
 
@@ -87,9 +88,8 @@
   }
 
   &__copy {
-    font-weight: 400;
+    font-weight: 600;
     padding-top: 2rem;
-    color: darken($c-font, 30%);
   }
 
   &__list {
@@ -97,15 +97,13 @@
   }
 }
 
-.content-overview-image {  
+.content-image {
   &__element {
     width: 100%;
-    max-width: 25rem;
     margin: 0 auto;
     height: auto;
 
     @media only screen and (min-width: $breakpoint-tablet) {
-      margin-top: 2rem;
       width: 90%;
       max-width: 15rem;
     }
@@ -116,7 +114,6 @@
   width: 100%;
   max-width: 25rem;
   color: $c-font;
-  padding: 1rem;
 
   &__form-group {
     margin-bottom: 1rem;
@@ -132,12 +129,12 @@
   &__submit {
     display: block;
     margin: 1.5rem auto 0 auto;
-    width: 70%;
-    max-width: 300px;
+    width: 100%;
 
     @media only screen and (min-width: $breakpoint-tablet) {
       margin: 1.5rem 0 0 0;
+      width: 70%;
+      max-width: 300px;
     }
   }
 }
-
