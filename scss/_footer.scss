@@ -1,7 +1,79 @@
 // footer styles
 
 .footer {
-  background-color: salmon;
+  background-color: #e8e9ea;
   text-align: center;
   padding: 1rem;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+
+    img {
+      width: 5rem;
+      height: auto;
+    } 
+  }
+
+  &__legal {
+    color: $c-font;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+  }
+
+  &__social {
+    font-family: FontAwesome
+  }
+}
+
+.footer-legal {
+  &__copyright {
+    display: block;
+    margin-bottom: .3rem;
+  }
+}
+
+.legal-links {
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-of-type)::after {
+      content: '|';
+    }
+
+    a {
+      color: $c-font;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-social {
+  &__link {
+    display: inline-block;
+    color: $c-font;
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+      margin-right: .5rem;
+    }
+  }
 }
