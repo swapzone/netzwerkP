@@ -1,0 +1,68 @@
+// form element styling
+@import './variables';
+
+.form-group {
+  &__label {
+    font-weight: 600;
+    
+    &--hidden {
+      display: none;
+    }
+  }
+}
+
+.radio-button {
+  padding-top: .5rem;
+
+  &__input {
+    margin-right: .4rem;
+  }
+}
+
+.input {
+  padding: .6rem;
+  border: 1px solid $c-border;
+  width: 100%;
+  transition: border-color .3s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $c-primary; 
+  } 
+}
+
+.checkbox {
+  display: flex;
+  line-height: 1.35;
+
+  &__input {
+    margin-right: .6rem;
+    margin-top: 0.2rem; 
+  }
+}
+
+.button {
+  background-color: $c-primary;
+  height: 3rem;
+  padding: .5rem 2rem;
+  border-radius: 1.2rem;
+  border: 1px solid transparent;
+  transition: all .3s ease-in-out;
+  color: $c-white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    height: 2.5rem;
+  }
+ 
+  &:hover {
+    background-color: transparent;
+    color: $c-primary;
+    border-color: $c-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+

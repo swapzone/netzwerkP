@@ -1,0 +1,54 @@
+@import './scss/forms';
+@import './scss/variables';
+@import './scss/elements';
+@import './scss/global';
+
+// element stylings
+@import './scss/header';
+@import './scss/footer';
+
+.confirmation {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+  color: $c-font;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $breakpoint-tablet) {
+    padding: 3rem 2rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-laptop) {
+    padding: 5rem;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 400;
+
+    @media only screen and (min-width: $breakpoint-tablet) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__thankyou {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__copy {
+    font-weight: 4;
+    margin-top: .3rem;
+    color: lighten($c-font, 10%);
+  }
+
+  &__error {
+    color: rgb(192, 12, 12);
+    margin: 1rem 0;
+    line-height: 1.3;
+  }
+}
