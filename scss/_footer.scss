@@ -38,7 +38,7 @@
   }
 
   &__social {
-    font-family: FontAwesome
+    font-family: FontAwesome;
   }
 }
 
@@ -71,9 +71,22 @@
     display: inline-block;
     color: $c-font;
     text-decoration: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+  
+    .fab {
+      line-height: 1.6rem;
+    }
 
     &:not(:last-of-type) {
       margin-right: .5rem;
+    }
+
+    &:hover {
+      color: #e8e9ea;
+      background-color: $c-font;
     }
   }
 }
